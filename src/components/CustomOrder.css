@@ -1,0 +1,78 @@
+.custom {
+  background: var(--black);
+  color: var(--white);
+  padding: clamp(70px, 10vw, 130px) 0;
+}
+
+.custom__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 90px);
+}
+
+.custom__intro .section-label {
+  color: var(--grey-light);
+}
+
+.custom__intro h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  max-width: 14ch;
+  margin-bottom: 26px;
+}
+
+.custom__lede {
+  color: #cfcac0;
+  max-width: 48ch;
+  font-size: 1rem;
+}
+
+.custom__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.custom__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  padding-left: clamp(24px, 4vw, 48px);
+}
+
+.custom__steps li {
+  display: flex;
+  gap: 20px;
+}
+
+.custom__step-index {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--grey-light);
+  min-width: 24px;
+}
+
+.custom__steps h3 {
+  font-size: 1.08rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.custom__steps p {
+  color: #cfcac0;
+  font-size: 0.94rem;
+  max-width: 40ch;
+}
+
+@media (max-width: 900px) {
+  .custom__inner {
+    grid-template-columns: 1fr;
+  }
+  .custom__steps {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 34px;
+  }
+}

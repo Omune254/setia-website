@@ -1,0 +1,6 @@
+.fab { position: fixed; bottom: 26px; right: 26px; width: 54px; height: 54px; border-radius: 50%; background: var(--black); color: var(--white); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,.25); z-index: 50; transition: transform 180ms var(--ease-out), box-shadow 180ms ease; animation: fab-in .7s .5s var(--ease-out) both; }
+.fab:hover { transform: translateY(-4px) scale(1.06); box-shadow: 0 12px 28px rgba(0,0,0,.3); }
+.fab:active { transform: scale(.95); }
+.fab .social-icon { width: 26px; height: 26px; }
+@keyframes fab-in { from { opacity: 0; transform: translateY(12px) scale(.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@media (max-width: 600px) { .fab { bottom: 18px; right: 18px; width: 48px; height: 48px; } .fab .social-icon { width: 22px; height: 22px; } }
