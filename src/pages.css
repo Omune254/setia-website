@@ -1,5 +1,35 @@
 
 
+/* Final admin dashboard layout override */
+.admin-page .admin-card { max-width: 1240px; }
+.admin-page .admin-card > .admin-form,
+.admin-page .admin-card > .admin-products { min-width: 0; }
+.admin-page .admin-card > .admin-form { grid-area: upload; margin-top: 0; padding: clamp(22px, 3vw, 34px); border: 1px solid var(--line); background: var(--white); box-shadow: 0 18px 50px rgba(16, 16, 16, 0.06); }
+.admin-page .admin-card > .admin-products { grid-area: collection; margin-top: 0; padding-top: 0; border-top: 0; }
+.admin-page .admin-card { display: grid; grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr); grid-template-areas: "header header" "upload collection"; align-items: start; column-gap: clamp(28px, 5vw, 72px); row-gap: 42px; }
+.admin-page .admin-card > .admin-header { grid-area: header; }
+.admin-page .admin-card > .admin-form .btn[type="submit"] { width: 100%; }
+.admin-page .admin-card > .admin-products .admin-products__list { max-height: 720px; overflow: auto; padding-right: 6px; }
+.admin-page .admin-card > .admin-products .admin-product { grid-template-columns: 88px minmax(0, 1fr); gap: 16px; }
+.admin-page .admin-card > .admin-products .admin-product__image { width: 88px; height: 112px; }
+.admin-page .admin-card > .admin-products .admin-product__actions { grid-column: 1 / -1; justify-content: stretch; padding-top: 4px; border-top: 1px solid var(--line); }
+.admin-page .admin-card > .admin-products .admin-product__actions .btn { flex: 1; }
+@media (max-width: 980px) {
+  .admin-page .admin-card { display: block; }
+  .admin-page .admin-card > .admin-form { margin-top: 42px; }
+  .admin-page .admin-card > .admin-products { margin-top: 58px; }
+  .admin-page .admin-card > .admin-products .admin-products__list { max-height: none; overflow: visible; padding-right: 0; }
+}
+@media (max-width: 640px) {
+  .admin-page .admin-card > .admin-form { margin-top: 30px; padding: 20px; }
+  .admin-page .admin-card > .admin-products { margin-top: 44px; }
+  .admin-page .admin-card > .admin-products .admin-product { grid-template-columns: 75px minmax(0, 1fr); gap: 12px; }
+  .admin-page .admin-card > .admin-products .admin-product__image { width: 75px; height: 100px; }
+  .admin-page .admin-card > .admin-products .admin-product__actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .admin-page .admin-card > .admin-products .admin-product__actions .btn:last-child { grid-column: 1 / -1; }
+}
+
+
 /* Admin dashboard layout refinement */
 .admin-card { max-width: 1240px; }
 .admin-dashboard { display: grid; grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr); align-items: start; gap: clamp(28px, 5vw, 72px); margin-top: 42px; }
